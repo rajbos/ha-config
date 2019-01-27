@@ -87,11 +87,19 @@ sensor time:
       - 'time_utc'
       - 'time'
       
-sensor sysmon:
+sensor sysmonDiskUsed:
   - platform: systemmonitor
+    name: "Disk used %"
     resources:
       - type: disk_use_percent
         arg: /home
+      - type: memory_free
+      
+sensor sysmonMemoryUsed:
+  - platform: systemmonitor
+    name: "Memory used %"
+    resources:
+      - type: memory_use_percent
       - type: memory_free
   
 panel_iframe:

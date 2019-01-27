@@ -1,5 +1,11 @@
-New group:
+Themes: 
   view: yes
   entities:
   - automation.set_theme_at_startup
   - automation.set_dark_theme_for_the_night
+  
+System:
+  view: yes
+  entities:
+  - sensor.disk_use_percent_home
+  - sensor.memory_use_percent_home
